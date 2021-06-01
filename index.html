@@ -9,18 +9,22 @@
 </head>
 
 <body>
-   <p id="term"></p>
+   <p id="term">🍖🤠</p>
    <button onclick="getTerm()">NEXT</button>
    <script>
       function getTerm() {
          let terms = ["standart IEEE-754", "Ripple Carry Adder x Carry Look Ahead Adder x binární stromy", "little endian / big endian", "write through(write allocation) x write back(příznak d - bit)", "vícecestná cache", "plně asociativní cache", "managment memory unit", "TLB(Transaction Lookaside Buffer)", "tabulka x stránka", "fáze procesoru(IF, ID, EX, ME, WB)", "delay slot", "hazard unit", "forwarding", "not taken / taken", "1 / 2 bitový prediktor", "Branch History Register", "dynamická / statická predikce skoků", "autonomní / centrální decoder", "RS232", "RS422", "UART ", "Universal asynchronous receiver transmit", "RS485", "SATA", "PCI", "PCI Express"];
-         let paragraph = document.getElementById('term');
-         let rnd = Math.floor(Math.random() * terms.length);  
-         let text = document.createTextNode(terms[rnd] + "  ~  ");
-
-         paragraph.appendChild(text);
+         let rnd = Math.floor(Math.random() * terms.length);
+         document.getElementById('term').innerText = terms[rnd];
       }
    </script>
+   <style>
+      body {
+         background: black;
+         color: white;
+         font-size: 2rem;
+      }
+   </style>
 </body>
 
 </html>
